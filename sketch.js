@@ -104,9 +104,10 @@ function draw() {
       }
       
       //jump when the space key is pressed
-      if(keyDown("space") && bunny.y >=200)
+      if(touches.length > 0 || keyDown("space") && bunny.y >=200)
       {
         bunny.velocityY = -12 ;
+        touches = [];
       }
     
       //add gravity
